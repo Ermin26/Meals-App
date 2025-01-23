@@ -8,11 +8,11 @@ function MealDetail({item}){
         <View style={styles.stepsContainer}>
             <View style={styles.ingredients}>
                 <Text style={styles.info}>Ingredients</Text>
-                {item.ingredients.map((ingredient) => (<Text style={styles.textData}>* {ingredient}</Text>))}
+                {item.ingredients.map((ingredient) => (<Text style={styles.textData} key={ingredient}>* {ingredient}</Text>))}
             </View>
             <View style={styles.steps}>
                 <Text style={styles.info}>Steps</Text>
-                {item.steps.map((ingredient) => (<Text style={styles.textData}>{ingredient}</Text>))}
+                {item.steps.map((step) => (<Text style={styles.textData} key={step}>{step}</Text>))}
             </View>
         </View>
     )
