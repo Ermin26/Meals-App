@@ -14,20 +14,22 @@ function showMeal({mealData}){
     }
 
     return (
-        <View style={styles.mealItem}>
-            <Pressable android_ripple={{color:'#cccc'}} style={({pressed}) => [ Platform.OS === 'android' ? null : pressed && styles.btnPressed ]} onPress={selectMealItem}>
-                <View style={styles.innerContainer}>
-                    <View>
-                        <Image source={{uri: mealData.imageUrl}} style={styles.image} />
-                        <Text style={styles.title}>{mealData.title}</Text>
+        <View style={styles.container}>
+            <View style={styles.mealItem}>
+                <Pressable android_ripple={{color:'#cccc'}} style={({pressed}) => [ Platform.OS === 'android' ? null : pressed && styles.btnPressed ]} onPress={selectMealItem}>
+                    <View style={styles.innerContainer}>
+                        <View>
+                            <Image source={{uri: mealData.imageUrl}} style={styles.image} />
+                            <Text style={styles.title}>{mealData.title}</Text>
+                        </View>
+                        <View style={styles.details}>
+                            <Text style={styles.item}>{mealData.duration} m</Text>
+                            <Text style={styles.item}>{mealData.complexity.toUpperCase()}</Text>
+                            <Text style={styles.item}>{mealData.affordability.toUpperCase()}</Text>
+                        </View>
                     </View>
-                    <View style={styles.details}>
-                        <Text style={styles.item}>{mealData.duration} m</Text>
-                        <Text style={styles.item}>{mealData.complexity.toUpperCase()}</Text>
-                        <Text style={styles.item}>{mealData.affordability.toUpperCase()}</Text>
-                    </View>
-                </View>
-            </Pressable>
+                </Pressable>
+            </View>
         </View>
     );
 }
@@ -38,6 +40,10 @@ export default showMeal;
 
 
 const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        padding: 16,
+    },
     mealItem:{
         margin: 16,
         borderRadius: 8,

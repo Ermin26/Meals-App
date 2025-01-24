@@ -27,11 +27,11 @@ function MealsScreen({route, navigation,goTo}){
     };
     return (
     <View style={styles.container}>
-        <Pressable android_ripple={{color:'#cccc'}}>
+        {/*<Pressable >*/}
             <FlatList data={displayedMeals}
             keyExtractor={(item)=> item.id}
             renderItem={renderMeals} />
-        </Pressable>
+        {/*</Pressable>*/}
     </View>
     )
 };
@@ -41,8 +41,6 @@ export default MealsScreen;
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
     },
 });
 
