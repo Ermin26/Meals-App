@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mealsApp",
+    "name": "My Receipt Book",
     "slug": "mealsApp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,16 +14,24 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "1.0.0"
     },
     "android": {
+      "versionCOde": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jolda26.myreceiptbook"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fe2427f2-9824-4f10-8948-c5324435bd66"
+      }
     }
   }
 }
